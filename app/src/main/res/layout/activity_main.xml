@@ -5,15 +5,65 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola a todos!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/manoMommy"
+        android:layout_width="260dp"
+        android:layout_height="180dp"
+        android:background="@drawable/manosMommy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="393dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/logoMommy"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/LogoMommy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_margin="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <ImageView
+        android:id="@+id/nameMommy"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:src="@drawable/nameMommy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="65dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/ingresar"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/amarilloOscuro"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="606dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/sing_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sing in"
+        android:textColor="@color/amarilloMasOscuro"
+        android:backgroundTint="@color/transparenteCompleto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
