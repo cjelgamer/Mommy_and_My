@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    val fragmentVersion = "1.8.0"
+    implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
 }
