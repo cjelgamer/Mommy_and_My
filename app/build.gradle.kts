@@ -48,5 +48,4 @@ dependencies {
 
     val fragmentVersion = "1.8.0"
     implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
-    implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
 }
