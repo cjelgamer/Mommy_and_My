@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_2">
+    android:background="@drawable/gradient_2"
+    tools:context=".Crear_cuenta">
 
     <ImageView
         android:id="@+id/logoMommy"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="489dp"
-        android:background="@drawable/LogoMommy"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_mommy"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
+
 
     <ImageView
-        android:layout_width="370dp"
-        android:layout_height="420dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="285dp"
-        android:layout_marginEnd="17dp"
-        android:background="@drawable/rectangle_register"
+        android:id="@+id/rectangle_register"
+        android:layout_width="310dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/rectangle_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
