@@ -11,5 +11,7 @@
     <color name="grisClaro">#DDDCDC</color>
     <color name="rojo">#FE0404</color>
     <color name="grisMasClaro">#DFDFDF</color>
+    <color name="rosa">#FAE7DF</color>
+    <color name="cafedatos">#D7937E</color>
 
 </resources>
