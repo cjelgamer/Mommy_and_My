@@ -12,8 +12,9 @@
         android:layout_width="200dp"
         android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/logo_mommy"
         android:alpha="0.5"
+        android:src="@drawable/logo_mommy"
+
         app:layout_constraintBottom_toTopOf="@+id/rectangle_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -33,5 +34,51 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="20dp"
+        android:hint="email"
+        android:textColor="#FFF"
+
+
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_register"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_register"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_register" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintStart_toStartOf="@id/rectangle_register"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_register"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintTop_toTopOf=""
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Telefono"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_register"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_register"
+        app:layout_constraintStart_toStartOf="@id/rectangle_register"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
