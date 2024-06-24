@@ -1,0 +1,16 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Mommy_and_My\r\nLa app \"Momy and Me\" centraliza información para embarazadas en una plataforma fácil de usar. Ofrece un contador de pataditas, seguimiento del tiempo de embarazo, consejos personalizados, monitoreo del desarrollo fetal, recordatorios médicos y una comunidad de apoyo para futuras madres, todo en un solo lugar.\r\nModifieddddddd\r\n\r\n\r\n18/06 pantalla 1 cristian , trabajos a hacer dsniela -> boton de pantalla 1 a pantalla 2 , pantalla 2\r\n
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	
++++ b/README.md	
+@@ -1,6 +1,6 @@
+ # Mommy_and_My
+ La app "Momy and Me" centraliza información para embarazadas en una plataforma fácil de usar. Ofrece un contador de pataditas, seguimiento del tiempo de embarazo, consejos personalizados, monitoreo del desarrollo fetal, recordatorios médicos y una comunidad de apoyo para futuras madres, todo en un solo lugar.
+-Modifieddddddd
++Modifiedddddd
+ 
+ 
+ 18/06 pantalla 1 cristian , trabajos a hacer dsniela -> boton de pantalla 1 a pantalla 2 , pantalla 2
