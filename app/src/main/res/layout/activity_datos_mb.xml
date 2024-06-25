@@ -16,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@null"
         />
 
     <ImageView
@@ -28,7 +29,8 @@
         app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@null"/>
 
     <TextView
         android:id="@+id/text1"
@@ -36,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
         android:layout_marginBottom="536dp"
-        android:text="Elegir idioma"
+        android:text="@string/textocrecue"
         android:textColor="@color/cafedatos"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -47,15 +49,35 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <Button
+        android:id="@+id/buttondatos1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="472dp"
+        android:layout_marginBottom="420dp"
         android:paddingHorizontal="120sp"
-        android:text="Español"
+        android:paddingVertical="12sp"
+        android:text="@string/spanish"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndO="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="id/@text1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttondatos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="340dp"
+        android:paddingHorizontal="120sp"
+        android:paddingVertical="12sp"
+        android:text="@string/english"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="id/@text1"
-        />
+        app:layout_constraintTop_toBottomOf="id/buttondatos2"
+        app:layout_constraintVertical_bias="0.85" />
 </androidx.constraintlayout.widget.ConstraintLayout>
