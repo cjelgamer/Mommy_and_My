@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Crear_cuenta::class.java)
             startActivity(intent)
         }
+
+
     }
 
 }

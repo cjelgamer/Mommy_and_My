@@ -16,7 +16,7 @@
             android:name=".iniciar_sesion"
             android:exported="false" />
         <activity
-            android:name=".datosMB"
+            android:name=".DatosMB"
             android:exported="false" />
         <activity
             android:name=".pantalla2"

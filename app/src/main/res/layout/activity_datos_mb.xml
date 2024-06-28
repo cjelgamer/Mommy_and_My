@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".datosMB"
+    tools:context=".DatosMB"
     android:background="@color/rosa">
 
     <ImageView
@@ -14,10 +14,9 @@
         android:background="@drawable/ambas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@null"
-        />
+        /><!--se;ala esta linea-->
 
     <ImageView
         android:id="@+id/ImageView"
@@ -26,7 +25,6 @@
         android:layout_marginBottom="540dp"
         android:background="@drawable/supambas"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,35 +47,37 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/buttondatos1"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="420dp"
-        android:paddingHorizontal="120sp"
-        android:paddingVertical="12sp"
+        android:paddingHorizontal="120dp"
+        android:paddingVertical="12dp"
         android:text="@string/spanish"
         android:textSize="20sp"
+        android:backgroundTint="@color/rosa"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="id/@text1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/buttondatos2"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
-        android:paddingHorizontal="120sp"
-        android:paddingVertical="12sp"
+        android:paddingHorizontal="124dp"
+        android:paddingVertical="12dp"
         android:text="@string/english"
         android:textSize="20sp"
+        android:backgroundTint="@color/rosa"
+        style="?android:attr/borderlessButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndO="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="id/buttondatos2"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintVertical_bias="0.1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
