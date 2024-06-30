@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Mommy_and_My"
         tools:targetApi="31">
         <activity
+            android:name=".datos_mb_1"
+            android:exported="false" />
+        <activity
             android:name=".datos_mb_3"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".iniciar_sesion"
             android:exported="false" />
         <activity
-            android:name=".datosMB"
+            android:name=".DatosMB"
             android:exported="false" />
         <activity
             android:name=".pantalla2"
