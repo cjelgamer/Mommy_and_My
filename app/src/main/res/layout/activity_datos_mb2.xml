@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosa"
+    tools:context=".datos_mb_2">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/supambas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ambas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tus_datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tus Datos"
+        android:textColor="@color/cafedatos"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.2"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/flor_adorno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tus_datos"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.1"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/btn_msj_name"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Nombre"
+        android:textColor="@color/cafeMasClaro"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintTop_toBottomOf="@id/tus_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+
+    <EditText
+        android:id="@+id/btn_msj_edad"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_border"
+        android:text="Edad"
+        android:textColor="@color/cafeMasClaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_msj_name"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+    <EditText
+        android:id="@+id/btn_msj_hijos"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_border"
+        android:text="Tienes hijos?"
+        android:textColor="@color/cafeMasClaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_msj_edad"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_text_border"
+        android:text="Estado Civil"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/cafeMasClaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_msj_hijos"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+    <Button
+        android:id="@+id/btn_continue_datos"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/rosaOscura"
+        android:text="Continuar"
+        app:layout_constraintBottom_toTopOf="@id/img_inf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.7"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

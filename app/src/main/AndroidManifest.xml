@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Mommy_and_My"
         tools:targetApi="31">
         <activity
+            android:name=".datos_mb_3"
+            android:exported="false" />
+        <activity
+            android:name=".datos_mb_2"
+            android:exported="false" />
+        <activity
             android:name=".iniciar_sesion"
             android:exported="false" />
         <activity

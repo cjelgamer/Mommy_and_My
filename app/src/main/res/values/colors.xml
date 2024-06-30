@@ -13,5 +13,13 @@
     <color name="grisMasClaro">#DFDFDF</color>
     <color name="rosa">#FAE7DF</color>
     <color name="cafedatos">#D7937E</color>
+    <color name="rosaOscura">#FF738F</color>
+    <color name="cafeClaro">#B69B83</color>
+    <color name="cafeMasClaro">#E5C1A0</color>
+    <color name="rosaClara">#FAE7DF</color>
+
+
+
+
 
 </resources>

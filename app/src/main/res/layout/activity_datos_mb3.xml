@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosa"
+    tools:context=".datos_mb_2">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/supambas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ambas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tus_datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresa fecha de tu parto"
+        android:textColor="@color/cafedatos"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/msj_advisement"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Ingrese una fecha estimada,
+        puedes cambiarla en cualquier momento"
+        android:textSize="15sp"
+        android:textColor="@color/cafeClaro"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tus_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields"/>
+
+
+    <EditText
+        android:id="@+id/btn_msj_agree"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/cafeMasClaro"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintTop_toBottomOf="@id/msj_advisement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields"/>
+
+
+    <Button
+        android:id="@+id/btn_continue_datos"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/rosaOscura"
+        android:text="Continuar"
+        app:layout_constraintBottom_toTopOf="@id/img_inf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_msj_agree"
+        app:layout_constraintVertical_bias="0.7"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
