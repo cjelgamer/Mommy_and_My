@@ -1,7 +1,9 @@
 package cunurana.calderon.mommy_and_my
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -18,5 +20,18 @@ class Crear_cuenta : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btn_login = findViewById<Button>(R.id.btn_login)
+        btn_login.setOnClickListener {
+            val intent = Intent(this, iniciar_sesion::class.java)
+            startActivity(intent)
+        }
+
+        val btn_ingresar = findViewById<Button>(R.id.btn_ingresar)
+        btn_ingresar.setOnClickListener {
+            val intent = Intent(this, datos_mb_1::class.java)
+            startActivity(intent)
+        }
+
     }
 }

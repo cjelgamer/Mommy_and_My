@@ -4,6 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/gradient_2"
     tools:context=".Crear_cuenta">
 
@@ -42,27 +43,28 @@
         android:layout_marginTop="44dp"
         android:layout_marginRight="20dp"
         android:hint="email"
-        android:textColor="#FFF"
+        android:inputType="text"
+        android:textColor="#000"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_register"
         app:layout_constraintStart_toStartOf="@+id/rectangle_register"
         app:layout_constraintTop_toTopOf="@+id/msj_bienvenido"
-        tools:ignore="Autofill,HardcodedText" />
+        tools:ignore="Autofill,HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
-        android:textColor="#FFF"
+        android:inputType="textPassword"
+        android:textColor="#000"
         android:textSize="15sp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintStart_toStartOf="@id/rectangle_register"
         app:layout_constraintEnd_toEndOf="@id/rectangle_register"
         app:layout_constraintTop_toBottomOf="@id/email"
-        app:layout_constraintTop_toTopOf=""
-        tools:ignore="Autofill,HardcodedText" />
+        tools:ignore="Autofill,HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/editText"
@@ -113,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Bienvenidos Mommy and My"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_register"
         app:layout_constraintStart_toStartOf="@+id/rectangle_register"
@@ -127,13 +129,12 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/grisMasClaro"
         android:text="Iniciar Sesion"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintBottom_toTopOf="@+id/msj_bienvenido"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_register"
         app:layout_constraintStart_toStartOf="@id/btn_crear_cuenta"
         app:layout_constraintTop_toTopOf="@id/rectangle_register"
-        app:layout_constraintVertical_bias="0.515"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <Button
         android:id="@+id/btn_crear_cuenta"
@@ -146,7 +147,6 @@
         app:layout_constraintEnd_toEndOf="@id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/rectangle_register"
         app:layout_constraintTop_toTopOf="@id/rectangle_register"
-        app:layout_constraintVertical_bias="0.515"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.515" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

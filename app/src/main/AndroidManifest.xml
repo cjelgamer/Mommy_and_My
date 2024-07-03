@@ -25,9 +25,6 @@
             android:name=".iniciar_sesion"
             android:exported="false" />
         <activity
-            android:name=".DatosMB"
-            android:exported="false" />
-        <activity
             android:name=".pantalla2"
             android:exported="false" />
         <activity android:name=".Crear_cuenta" />

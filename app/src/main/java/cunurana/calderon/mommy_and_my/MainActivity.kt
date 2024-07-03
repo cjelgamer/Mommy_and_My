@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 //import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        val btn_login = findViewById<Button>(R.id.btn_login)
+        btn_login.setOnClickListener {
+            val intent = Intent(this, iniciar_sesion::class.java)
+            startActivity(intent)
+        }
 
     }
 

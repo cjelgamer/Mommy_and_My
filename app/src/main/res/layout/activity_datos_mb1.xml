@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/rosa"
     tools:context=".datos_mb_1">
 
@@ -21,7 +22,7 @@
             tools:ignore="UnusedAttribute" />
 
         <ImageView
-            android:id="@+id/ImageView"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/supambas"
@@ -37,36 +38,32 @@
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginBottom="536dp"
             android:text="@string/textocrecue"
             android:textColor="@color/cafedatos"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndO="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="id/@ImageView"
-            app:layout_constraintVertical_bias="0.1" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"/>
 
         <Button
             android:id="@+id/btn_spanish"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="420dp"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/rosa"
             android:paddingHorizontal="120dp"
             android:paddingVertical="12dp"
             android:text="@string/spanish"
-            android:textSize="20sp"
             android:textColor="@color/cafeClaro"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/rosa"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="id/@text1"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.3"/>
 
         <Button
             android:id="@+id/btn_english"
@@ -84,11 +81,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_spanish"
             app:layout_constraintVertical_bias="0.1"/>
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

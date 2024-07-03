@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
@@ -44,11 +45,11 @@
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <Button
-        android:id="@+id/btn_ingresar"
+        android:id="@+id/btn_login"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/amarilloOscuro"
-        android:text="Ingresar"
+        android:text="Iniciar Sesion"
         app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
