@@ -13,18 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn_sign_up = findViewById<Button>(R.id.btn_sign_up)
+        val btnSignUp = findViewById<Button>(R.id.btn_sign_up)
         //Toast.makeText(applicationContext,"Me presionaste......",Toast.LENGTH_SHORT).show()
-        btn_sign_up.setOnClickListener {
+        btnSignUp.setOnClickListener {
             val intent = Intent(this, Crear_cuenta::class.java)
             startActivity(intent)
         }
 
 
-        val btn_login = findViewById<Button>(R.id.btn_login)
-        btn_login.setOnClickListener {
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+        btnLogin.setOnClickListener {
             val intent = Intent(this, iniciar_sesion::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
     }
