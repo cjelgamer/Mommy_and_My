@@ -43,10 +43,14 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.appcompat)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
     val fragmentVersion = "1.8.0"
     implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
+
+    //implementation ‘com.google.android.material:material:1.2.0’
 }
