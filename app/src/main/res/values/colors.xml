@@ -18,6 +18,11 @@
     <color name="cafeMasClaro">#E5C1A0</color>
     <color name="rosaClara">#FAE7DF</color>
     <color name="rosahoy">#D7937E</color>
-
+    <color name="celestePastel">#D4F9FF</color>
+    <color name="amarilloPastel">#FFF7CB</color>
+    <color name="moradoPastel">#F3DDF6</color>
+    <color name="verdePastel">#ECFFC3</color>
+    <color name="rojoPastel">#FCD9D9</color>
+    <color name="naranjaPastel">#F3CFAE</color>
 
 </resources>

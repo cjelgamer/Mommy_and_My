@@ -47,7 +47,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.recyclerview)
 
     val fragmentVersion = "1.8.0"
     implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
