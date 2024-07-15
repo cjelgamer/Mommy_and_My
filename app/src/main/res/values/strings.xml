@@ -6,6 +6,8 @@
     <string name="textois">Iniciar Sesion</string>
     <string name="texto1Menu">Hoy</string>
     <string name="nombre">Nombre</string>
+    <string name="GuiaE">Guía de Entrenamiento</string>
+    <string name="monitoreom">Monitoreo del bebe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!-- <string name="hello_blank_fragment">Hello blank fragment</string> -->
 </resources>
