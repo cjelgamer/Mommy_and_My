@@ -8,6 +8,9 @@
     <string name="nombre">Nombre</string>
     <string name="GuiaE">Guía de Entrenamiento</string>
     <string name="monitoreom">Monitoreo del bebe</string>
+    <string name="mominform">Mamá\nInformada</string>
+    <string name="controlm">Control y\nSintomas</string>
+    <string name="forom">Foro\n</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!-- <string name="hello_blank_fragment">Hello blank fragment</string> -->
 </resources>
