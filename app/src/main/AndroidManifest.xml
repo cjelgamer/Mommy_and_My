@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Mommy_and_My"
         tools:targetApi="31">
         <activity
-            android:name=".Bienvenida"
-            android:exported="false" />
-        <activity
             android:name=".Menu"
             android:exported="false" />
         <activity
