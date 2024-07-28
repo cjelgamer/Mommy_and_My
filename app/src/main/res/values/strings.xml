@@ -11,6 +11,9 @@
     <string name="mominform">Mamá\nInformada</string>
     <string name="controlm">Control y\nSintomas</string>
     <string name="forom">Foro\n</string>
+    <string name="Home">Home</string>
+    <string name="Config">Config</string>
+    <string name="continuar">Continuar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!-- <string name="hello_blank_fragment">Hello blank fragment</string> -->
 </resources>
