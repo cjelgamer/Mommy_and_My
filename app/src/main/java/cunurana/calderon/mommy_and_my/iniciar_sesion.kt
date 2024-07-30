@@ -48,6 +48,9 @@ class iniciar_sesion : AppCompatActivity() {
             if (isLoggedIn) {
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
                 // Navegar a la siguiente actividad
+                val intent = Intent(this, Menuprin::class.java)
+                startActivity(intent)
+                finish()
 
 
             } else {

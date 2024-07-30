@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.Toast
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -15,6 +17,40 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val bt1: ImageButton = view.findViewById(R.id.item01)
+        bt1.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+        val bt2: ImageButton = view.findViewById(R.id.item02)
+        bt2.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+        val bt3: ImageButton = view.findViewById(R.id.item03)
+        bt3.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+        val bt4: ImageButton = view.findViewById(R.id.item04)
+        bt4.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+        val bt5: ImageButton = view.findViewById(R.id.item05)
+        bt5.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+        val bt6: ImageButton = view.findViewById(R.id.item06)
+        bt6.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+
+        }
+        val btf: ImageButton = view.findViewById(R.id.item07)
+        btf.setOnClickListener {
+            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
