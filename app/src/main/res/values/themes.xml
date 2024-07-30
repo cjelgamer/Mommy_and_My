@@ -1,9 +1,16 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <!-- Base application theme. -->
     <style name="Base.Theme.Mommy_and_My" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/crema</item>
+        <item name="colorPrimaryVariant">@color/celestePastel</item>
+        <item name="android:statusBarColor">@color/moradoPastel</item>
     </style>
 
     <style name="Theme.Mommy_and_My" parent="Base.Theme.Mommy_and_My" />
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/crema</item>
+    </style>
 </resources>

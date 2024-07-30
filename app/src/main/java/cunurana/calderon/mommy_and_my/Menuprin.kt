@@ -1,39 +1,46 @@
 package cunurana.calderon.mommy_and_my
 
+
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import cunurana.calderon.mommy_and_my.databinding.ActivityRegistroBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Menuprin : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegistroBinding
+    private lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_menuprin)
 
-        binding = ActivityRegistroBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        bottomNavigationView = findViewById(R.id.bottom_nav_View)
 
-        // Inicializa con el fragmento inicial
+        bottomNavigationView.setOnItemSelectedListener {menuItem->
+            when(menuItem.itemId){
+                R.id.bottom_nav_View -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.bottom_nav_View -> {
+                    replaceFragment(PersonFragment())
+                    true
+                }
+                R.id.bottom_nav_View -> {
+                    replaceFragment(ConfigFragment())
+                    true
+                }
+                else -> false
+            }
+
+        }
         replaceFragment(HomeFragment())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.homeFragment-> replaceFragment(HomeFragment())
-                R.id.personFragment -> replaceFragment(PersonFragment())
-                R.id.configFragment -> replaceFragment(ConfigFragment())
-                else -> {}
-            }
-            true
-        }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.navHost, fragment)
-        transaction.commit()
+
+    private fun replaceFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.contendor_fragmentos, fragment).commit()
+
     }
 }

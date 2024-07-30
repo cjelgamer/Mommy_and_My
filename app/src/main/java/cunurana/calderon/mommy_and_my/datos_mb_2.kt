@@ -1,6 +1,8 @@
 package cunurana.calderon.mommy_and_my
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,13 @@ class datos_mb_2 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btn_continue_datos=findViewById<Button>(R.id.btn_continue_datos)
+        btn_continue_datos.setOnClickListener{
+            val intent = Intent(this, Menuprin::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
