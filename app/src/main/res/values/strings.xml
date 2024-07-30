@@ -24,6 +24,11 @@
     <string name="botonfmenu">bf</string>
     <string name="mantenlacalma">Manten la calma</string>
     <string name="parrafo">Envió automático de ubicación  en\n proceso, contactando con los hospitales\n mas cercanos</string>
+    <string name="q1">¿Te encuentras sola?</string>
+    <string name="q2">¿Qué síntomas presentas?</string>
+    <string name="q3">¿Zona donde resides o vives \nactualmente?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
