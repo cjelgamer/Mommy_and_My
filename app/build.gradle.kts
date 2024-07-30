@@ -56,7 +56,7 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.recyclerview)
 
-    val fragmentVersion = "1.8.0"
+    val fragmentVersion = "1.8.2"
     implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
 
     //implementation ‘com.google.android.material:material:1.2.0’

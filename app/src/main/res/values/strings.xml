@@ -13,7 +13,14 @@
     <string name="forom">Foro\n</string>
     <string name="Home">Home</string>
     <string name="Config">Config</string>
+    <string name="cuenta">Perfil</string>
     <string name="continuar">Continuar</string>
+    <string name="boton1menu">b1</string>
+    <string name="boton2menu">b2</string>
+    <string name="boton3menu">b3</string>
+    <string name="boton4menu">b4</string>
+    <string name="boton5menu">b5</string>
+    <string name="boton6menu">b6</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!-- <string name="hello_blank_fragment">Hello blank fragment</string> -->
 </resources>
