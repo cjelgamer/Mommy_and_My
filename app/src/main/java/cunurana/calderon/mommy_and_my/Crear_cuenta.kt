@@ -1,5 +1,6 @@
 package cunurana.calderon.mommy_and_my
 
+import DatabaseHelper
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -43,18 +44,17 @@ class Crear_cuenta : AppCompatActivity() {
             }
 
             val dbHelper = DatabaseHelper(this)
-            val userId = dbHelper.insertUsuario(email, password, telefono)
+            val userId = dbHelper.insertUserRegistration(email, password, telefono)
             dbHelper.close()
 
             if (userId > -1) {
                 Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                 // Navegar a la siguiente actividad
-                val intent = Intent(this, datos_mb_1::class.java)
+                val intent = Intent(this, datos_mb_2::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Error al registrar usuario", Toast.LENGTH_SHORT).show()
             }
-
         }
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
@@ -64,3 +64,4 @@ class Crear_cuenta : AppCompatActivity() {
         }
     }
 }
+

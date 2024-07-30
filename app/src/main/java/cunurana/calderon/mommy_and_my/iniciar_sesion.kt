@@ -1,5 +1,6 @@
 package cunurana.calderon.mommy_and_my
 
+import DatabaseHelper
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -27,7 +28,6 @@ class iniciar_sesion : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         val emailEditText = findViewById<EditText>(R.id.email)
         val passwordEditText = findViewById<EditText>(R.id.password)
 
@@ -48,8 +48,9 @@ class iniciar_sesion : AppCompatActivity() {
             if (isLoggedIn) {
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
                 // Navegar a la siguiente actividad
-
-
+                val intent = Intent(this, Menuprin::class.java) // Cambia a la actividad que desees
+                startActivity(intent)
+                finish() // Para que no se pueda regresar a esta pantalla con el botón de atrás
             } else {
                 Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
             }
