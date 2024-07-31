@@ -29,8 +29,11 @@
     <string name="q3">¿Zona donde resides o vives \nactualmente?</string>
     <string name="si">Si</string>
     <string name="no">No</string>
+    <string name="titcontrol">Registra tus síntomas aquí</string>
+    <string name="boton1itemc">c1</string>
+    <string name="text1itemc">Registro de frecuencia cardíaca</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank \nfragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!-- <string name="hello_blank_fragment">Hello blank fragment</string> -->
 </resources>

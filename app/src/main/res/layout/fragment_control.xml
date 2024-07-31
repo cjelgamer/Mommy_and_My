@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ControlFragment">
 
     <ImageView
@@ -11,4 +12,49 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ellipsecontrol"
         tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/contenedor_control">
+
+
+            <TextView
+                android:id="@+id/textprev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titcontrol"
+                android:textColor="@color/verdetitulo"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <ImageButton
+                android:id="@+id/botonitem"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/buttom_border"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/boton1itemc"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/text1itemc"
+                app:layout_constraintTop_toBottomOf="@id/textprev"
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintHeight_percent="0.5"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
 </FrameLayout>

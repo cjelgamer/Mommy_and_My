@@ -28,5 +28,9 @@
     <color name="morado">#F8D0FF</color>
     <color name="crema">#FFF4D7</color>
     <color name="rojoprev">#EB5151</color>
+    <color name="verdeitem">#B2F074</color>
+    <color name="verdetitulo">#97D80E</color>
+
+
 
 </resources>
