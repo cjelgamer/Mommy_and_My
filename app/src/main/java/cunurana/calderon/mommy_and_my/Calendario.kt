@@ -12,9 +12,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
-
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 /**
  * A simple [Fragment] subclass.
  * Use the [Calendario.newInstance] factory method to
@@ -39,31 +39,40 @@ class Calendario : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        calendarView = view.findViewById(R.id.calendary_view)
+        // Initialize views
+        calendarView = view.findViewById(R.id.calendary_view) // Asegúrate de que este ID coincida con el del XML
         textFechaSeleccionada = view.findViewById(R.id.textFechaSeleccionada)
         notasDia = view.findViewById(R.id.notas_dia)
         btnGuardarRecordatorio = view.findViewById(R.id.btn_guardar_recordatorio)
         btnEliminarRecordatorio = view.findViewById(R.id.btn_eliminar_recordatorio)
 
+        // Initialize DatabaseHelper
         dbHelper = DatabaseHelper(requireContext())
 
+        // Set listener for date changes in CalendarView
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val date = "$year-${month + 1}-$dayOfMonth"
             textFechaSeleccionada.text = date
             loadReminder(date)
         }
 
+        // Set OnClickListener for save button
         btnGuardarRecordatorio.setOnClickListener {
             val date = textFechaSeleccionada.text.toString()
             val note = notasDia.text.toString()
             if (date.isNotEmpty() && note.isNotEmpty()) {
-                dbHelper.insertReminder(date, note)
-                Toast.makeText(requireContext(), "Recordatorio guardado", Toast.LENGTH_SHORT).show()
+                if (note.length <= 50) { // Optionally add length check
+                    dbHelper.insertReminder(date, note)
+                    Toast.makeText(requireContext(), "Recordatorio guardado", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(), "La nota no puede exceder 50 caracteres", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(requireContext(), "Debe seleccionar una fecha y agregar una nota", Toast.LENGTH_SHORT).show()
             }
         }
 
+        // Set OnClickListener for delete button
         btnEliminarRecordatorio.setOnClickListener {
             val date = textFechaSeleccionada.text.toString()
             if (date.isNotEmpty()) {
@@ -76,6 +85,7 @@ class Calendario : Fragment() {
         }
     }
 
+    // Load reminder note from database
     private fun loadReminder(date: String) {
         val note = dbHelper.getReminder(date)
         notasDia.setText(note ?: "")

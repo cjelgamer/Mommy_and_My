@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Calendario">
 
     <ImageView
         android:id="@+id/elipseprev"
         android:layout_width="match_parent"
-        android:layout_height="143dp"
+        android:layout_height="105dp"
         android:background="@drawable/elipse_celeste"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp">
+        android:fillViewport="true"
+        android:paddingTop="100dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/headerLayout"
@@ -34,20 +32,18 @@
                 android:textColor="#7ABBEA"
                 android:textSize="38sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.066"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
             <CalendarView
                 android:id="@+id/calendary_view"
-                android:layout_width="331dp"
+                android:layout_width="match_parent"
                 android:layout_height="319dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textcalendary"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toBottomOf="@+id/textcalendary" />
 
             <TextView
                 android:id="@+id/textFechaActual"
@@ -55,84 +51,88 @@
                 android:layout_height="wrap_content"
                 android:text="Fecha Actual"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/calendary_view"
-                tools:ignore="HardcodedText,MissingConstraints" />
-
-            <TextView
-                android:id="@+id/textFechaSeleccionada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecciona una fecha"
-                android:textColor="#000"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textFechaActual"
                 tools:ignore="HardcodedText" />
+
 
             <ImageView
                 android:id="@+id/img_azul"
                 android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:background="@drawable/cuadradoceleste_calendario"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/calendary_view"
                 app:layout_constraintStart_toStartOf="@+id/img_celeste"
-                app:layout_constraintTop_toBottomOf="@+id/textFechaSeleccionada"
+                app:layout_constraintTop_toBottomOf="@+id/textFechaActual"
                 tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/img_celeste"
                 android:layout_width="150dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:background="@drawable/cuadroazul_calendario"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textFechaSeleccionada"
+                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintStart_toStartOf="@+id/calendary_view"
+                app:layout_constraintTop_toBottomOf="@+id/textFechaActual"
                 tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/notas_dia"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="24dp"
                 android:hint="agrega recordatorio"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/img_azul"
-                app:layout_constraintHorizontal_bias="0.712"
+                android:textSize="10sp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/img_azul"
                 app:layout_constraintStart_toEndOf="@+id/img_celeste"
                 app:layout_constraintTop_toTopOf="@+id/img_azul"
-                tools:ignore="Autofill,HardcodedText,TextFields" />
+                app:layout_constraintVertical_bias="0.55"
+                tools:ignore="Autofill,HardcodedText,SmallSp" />
+
 
             <ImageView
                 android:id="@+id/img_puntos"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
                 android:background="@drawable/puntos_calendario"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btn_guardar_recordatorio"
                 app:layout_constraintEnd_toStartOf="@+id/notas_dia"
-                app:layout_constraintStart_toEndOf="@+id/img_celeste"
-                app:layout_constraintTop_toTopOf="@+id/img_azul"
+                app:layout_constraintTop_toTopOf="@+id/img_celeste"
                 tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textFechaSeleccionada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fecha"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_celeste"
+                app:layout_constraintEnd_toEndOf="@+id/img_celeste"
+                app:layout_constraintStart_toStartOf="@+id/img_celeste"
+                app:layout_constraintTop_toTopOf="@+id/img_celeste"
+                app:layout_constraintVertical_bias="0.485"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:id="@+id/btn_guardar_recordatorio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:backgroundTint="#7ABBEA"
                 android:text="Guardar"
                 android:textColor="#000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/notas_dia"
+
+                app:layout_constraintEnd_toStartOf="@+id/btn_eliminar_recordatorio"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="@+id/calendary_view"
+                app:layout_constraintTop_toBottomOf="@+id/img_azul"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -143,11 +143,19 @@
                 android:backgroundTint="#7ABBEA"
                 android:text="Eliminar"
                 android:textColor="#000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_guardar_recordatorio"
-                app:layout_constraintStart_toEndOf="@+id/img_celeste"
-                app:layout_constraintTop_toBottomOf="@+id/notas_dia"
+                app:layout_constraintEnd_toEndOf="@+id/calendary_view"
+                app:layout_constraintTop_toBottomOf="@+id/img_azul"
                 tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/space_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
