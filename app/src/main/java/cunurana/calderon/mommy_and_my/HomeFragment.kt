@@ -43,7 +43,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val bt3: ImageButton = view.findViewById(R.id.item03)
         bt3.setOnClickListener {
             Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
-            val nextFragment = PrevencionFragment()
+            val nextFragment = MonitoreoBebeFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
                 .addToBackStack(null)
@@ -52,7 +52,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val bt4: ImageButton = view.findViewById(R.id.item04)
         bt4.setOnClickListener {
             Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
-            val nextFragment = MonitoreoBebeFragment()
+            val nextFragment = MamaInformadaFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
                 .addToBackStack(null)
@@ -61,7 +61,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val bt5: ImageButton = view.findViewById(R.id.item05)
         bt5.setOnClickListener {
             Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
-            val nextFragment = MamaInformadaFragment()
+            val nextFragment = ControlFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
                 .addToBackStack(null)
@@ -70,7 +70,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val bt6: ImageButton = view.findViewById(R.id.item06)
         bt6.setOnClickListener {
             Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
-            val nextFragment = ControlFragment()
+            val nextFragment = ForoFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
                 .addToBackStack(null)
@@ -80,7 +80,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val btf: ImageButton = view.findViewById(R.id.item07)
         btf.setOnClickListener {
             Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
-            val nextFragment = ForoFragment()
+            val nextFragment = PropioFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
                 .addToBackStack(null)
