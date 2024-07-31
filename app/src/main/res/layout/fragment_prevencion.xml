@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Prevencion">
+    tools:context=".PrevencionFragment">
 
     <ImageView
         android:id="@+id/elipseprev"
@@ -55,49 +55,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/circulo"
-                android:layout_width="wrap_content"
+            <include
+                android:id="@+id/pregunta2"
+                layout="@layout/item_pregunta"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/circleprev"
+                android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.073"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/parrafprev"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/pregunta1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:textSize="20sp"
-                android:text="@string/q1"
-                android:textColor="@color/rojoprev"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@id/circulo"
-                app:layout_constraintTop_toBottomOf="@id/parrafprev"
-                tools:ignore="MissingConstraints" />
+                android:layout_marginTop="16dp"/>
 
 
-            <CheckBox
-                android:id="@+id/casilla1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:button="@drawable/selector_checkbox"
-                android:scaleX="2"
-                android:scaleY="2"
-                android:text="@string/si"
-                android:textSize="10sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.267"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pregunta1"
-                tools:ignore="SmallSp" />
+
 
 
 

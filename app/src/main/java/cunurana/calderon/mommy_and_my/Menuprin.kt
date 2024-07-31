@@ -18,17 +18,17 @@ class Menuprin : AppCompatActivity() {
 
         bottomNavigationView.setOnItemSelectedListener {menuItem->
               when (menuItem.itemId) {
-                R.id.bottom_nav_View -> {
+                R.id.bottom_home -> {
                     replaceFragment(HomeFragment())
                     true
                 }
 
-                R.id.bottom_nav_View -> {
+                R.id.bottom_perfil -> {
                     replaceFragment(PersonFragment())
                     true
                 }
 
-                R.id.bottom_nav_View -> {
+                R.id.bottom_config -> {
                     replaceFragment(ConfigFragment())
                     true
                 }

@@ -1,23 +1,49 @@
 package cunurana.calderon.mommy_and_my
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+class Prevencion : AppCompatActivity() {
+    private lateinit var bottomNavigationView: BottomNavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_prevencion)
+
+        bottomNavigationView = findViewById(R.id.bottom_nav_View)
+
+        bottomNavigationView.setOnItemSelectedListener {menuItem->
+            when (menuItem.itemId) {
+                R.id.bottom_home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+
+                R.id.bottom_perfil -> {
+                    replaceFragment(PersonFragment())
+                    true
+                }
+
+                R.id.bottom_config -> {
+                    replaceFragment(ConfigFragment())
+                    true
+                }
+
+                else -> false
+            }
 
 
-class Prevencion : Fragment() {
+        }
+        replaceFragment(HomeFragment())
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_prevencion, container, false)
+
     }
 
 
+    private fun replaceFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.contendor_fragmentos, fragment).commit()
 
-
+    }
 }
