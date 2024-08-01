@@ -56,7 +56,7 @@
                 tools:ignore="MissingConstraints" />
 
             <include
-                android:id="@+id/pregunta2"
+                android:id="@+id/bpregunta1"
                 layout="@layout/item_pregunta"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -64,6 +64,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/parrafprev"
                 android:layout_marginTop="16dp"/>
+
+            <include
+                android:id="@+id/bpregunta2"
+                layout="@layout/item_pregunta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bpregunta1" />
 
 
 

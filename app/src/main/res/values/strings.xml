@@ -26,12 +26,28 @@
     <string name="parrafo">Envió automático de ubicación  en\n proceso, contactando con los hospitales\n mas cercanos</string>
     <string name="q1">¿Te encuentras sola?</string>
     <string name="q2">¿Qué síntomas presentas?</string>
+    <string name="rq21">Dolor de cabeza</string>
+    <string name="rq22">Hinchazón de pies, manos y \ncara</string>
+    <string name="rq23">Contracciones intensas</string>
+    <string name="rq24">Otro</string>
     <string name="q3">¿Zona donde resides o vives \nactualmente?</string>
     <string name="si">Si</string>
     <string name="no">No</string>
     <string name="titcontrol">Registra tus síntomas aquí</string>
     <string name="boton1itemc">c1</string>
-    <string name="text1itemc">Registro de frecuencia cardíaca</string>
+    <string name="titcont">Contador de Patadas</string>
+    <string name="Pulsar">Pulsa en el botón al sentir las patadas de tu bebe</string>
+    <string name="reporte">Reporte de estadisticas</string>
+    <string name="movimeintos">Movimientos adicionales</string>
+    <string name="btoncont">btcont</string>
+    <string name="indica">Pulsa en el botón al sentir las patadas de tu bebe</string>
+    <string name="report">Reporte de estadisticas</string>
+    <string name="movi">Movimientos adicionales</string>
+    <string name="itemcontrol1">Registro de frecuencia \ncardíaca</string>
+    <string name="itemcontrol2">Contador de \ncontracciones</string>
+    <string name="itemcontrol3">Síntomas adicionales</string>
+    <string name="itemcontrol4">Cambios corporales</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank \nfragment</string>
     <!-- TODO: Remove or change this placeholder text -->

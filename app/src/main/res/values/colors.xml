@@ -30,7 +30,10 @@
     <color name="rojoprev">#EB5151</color>
     <color name="verdeitem">#B2F074</color>
     <color name="verdetitulo">#97D80E</color>
-
-
+    <color name="caramelotitutlo">#E79636</color>
+    <color name="carameloborde">#FFDABE</color>
+    <color name="cafe">#7E4612</color>
+    <color name="cremacont">#FFF9EB</color>
+    <color name="caramelobtsec">#ECB286</color>
 
 </resources>

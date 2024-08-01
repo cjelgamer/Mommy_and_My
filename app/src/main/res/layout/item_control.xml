@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/botonitem1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/item1c"
+        android:text="@string/itemcontrol1"
+        android:layout_marginTop="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/itemcontrol1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.21"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/botonitem2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/item2c"
+        android:layout_marginTop="32sp"
+        android:text="@string/itemcontrol2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/itemcontrol2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botonitem1"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.21"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/botonitem3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/item3c"
+        android:layout_marginTop="32sp"
+        android:text="@string/itemcontrol2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/itemcontrol2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botonitem2"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.21"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/botonitem4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/item4c"
+        android:layout_marginTop="32sp"
+        android:text="@string/itemcontrol4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/itemcontrol4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botonitem3"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.21"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

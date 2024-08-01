@@ -3,13 +3,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MonitoreoBebeFragment">
 
-    <ImageView
-        android:id="@+id/elipseprev"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contmoni"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ellipsemoni"
-        tools:ignore="ContentDescription" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/elipseprev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ellipsemoni"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/textcontador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titcont"
+            android:textColor="@color/caramelotitutlo"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elipseprev"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/botoncontador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/botoncontador"
+            android:contentDescription="@string/btoncont"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textcontador"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/indicador"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/indica"
+            android:textColor="@color/cafe"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/buttom_border2"
+            android:layout_marginTop="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toBottomOf="@+id/botoncontador"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/cont_bot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/buttom_border3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/indicador"
+            app:layout_constraintWidth_percent="0.75"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/btestadis"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/buttom_border4"
+            android:text="@string/report"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintWidth_percent="0.55"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cont_bot"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btmov"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/buttom_border4"
+            android:text="@string/movi"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintWidth_percent="0.55"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/cont_bot"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
