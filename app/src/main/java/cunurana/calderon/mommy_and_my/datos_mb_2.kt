@@ -22,7 +22,6 @@ class datos_mb_2 : AppCompatActivity() {
             insets
         }
 
-        // Encuentra los EditText usando los IDs definidos en el XML
         val nombreEditText = findViewById<EditText>(R.id.btn_msj_name)
         val edadEditText = findViewById<EditText>(R.id.btn_msj_edad)
         val tieneHijosEditText = findViewById<EditText>(R.id.btn_msj_hijos)
@@ -32,23 +31,21 @@ class datos_mb_2 : AppCompatActivity() {
         btnContinueDatos.setOnClickListener {
             val nombre = nombreEditText.text.toString()
             val edad = edadEditText.text.toString().toIntOrNull()
-            val tieneHijos = tieneHijosEditText.text.toString()
+            val tieneHijosString = tieneHijosEditText.text.toString()
+            val tieneHijos = tieneHijosString.equals("true", ignoreCase = true)
             val estadoCivil = estadoCivilEditText.text.toString()
 
-            // Verificar si todos los campos están completos
-            if (nombre.isEmpty() || edad == null || tieneHijos.isEmpty() || estadoCivil.isEmpty()) {
+            if (nombre.isEmpty() || edad == null || tieneHijosString.isEmpty() || estadoCivil.isEmpty()) {
                 Toast.makeText(this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Crear instancia de DatabaseHelper y guardar los datos
             val dbHelper = DatabaseHelper(this)
             val userDataId = dbHelper.insertUserData(nombre, edad, tieneHijos, estadoCivil)
             dbHelper.close()
 
             if (userDataId > -1) {
                 Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show()
-                // Iniciar la siguiente actividad
                 val intent = Intent(this, Menuprin::class.java)
                 startActivity(intent)
                 finish()

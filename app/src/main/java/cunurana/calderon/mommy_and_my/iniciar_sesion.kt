@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class iniciar_sesion : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,7 +29,6 @@ class iniciar_sesion : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         val emailEditText = findViewById<EditText>(R.id.email)
         val passwordEditText = findViewById<EditText>(R.id.password)
 
@@ -43,16 +43,17 @@ class iniciar_sesion : AppCompatActivity() {
             }
 
             val dbHelper = DatabaseHelper(this)
-            val isLoggedIn = dbHelper.login(email, password)
+            val userId = dbHelper.login(email, password) // Ahora obtienes el ID del usuario
             dbHelper.close()
 
-            if (isLoggedIn) {
+            if (userId != null) {
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
-                // Navegar a la siguiente actividad
-                val intent = Intent(this, Menuprin::class.java)
+                // Navegar a la siguiente actividad y pasar el ID del usuario
+                val intent = Intent(this, Menuprin::class.java).apply {
+                    putExtra("USER_ID", userId)
+                }
                 startActivity(intent)
                 finish()
-
             } else {
                 Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
             }
