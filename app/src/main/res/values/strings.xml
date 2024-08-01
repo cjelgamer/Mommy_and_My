@@ -31,6 +31,10 @@
     <string name="rq23">Contracciones intensas</string>
     <string name="rq24">Otro</string>
     <string name="q3">¿Zona donde resides o vives \nactualmente?</string>
+    <string name="rq31">Rural</string>
+    <string name="rq32">Urbana</string>
+    <string name="parraf2c">Presiona en el ícono para llamar a \ncontactos de emergencia</string>
+    <string name="btll">botonllamada</string>
     <string name="si">Si</string>
     <string name="no">No</string>
     <string name="titcontrol">Registra tus síntomas aquí</string>
@@ -47,6 +51,7 @@
     <string name="itemcontrol2">Contador de \ncontracciones</string>
     <string name="itemcontrol3">Síntomas adicionales</string>
     <string name="itemcontrol4">Cambios corporales</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank \nfragment</string>
