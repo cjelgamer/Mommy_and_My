@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 4
         private const val DATABASE_NAME = "MommyAndMy.db"
         private const val TABLE_USER_REGISTRATION = "UsuarioRegistro"
         private const val TABLE_USER_DATA = "UsuarioDatos"
@@ -32,6 +32,10 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val COLUMN_REMINDER_ID = "ID_Recordatorio"
         private const val COLUMN_REMINDER_DATE = "Fecha"
         private const val COLUMN_REMINDER_NOTE = "Nota"
+
+        private const val TABLE_FOROS = "Foros"
+        private const val COLUMN_FORO_ID = "ID_Forum"
+        private const val COLUMN_FORO_TEXT = "Texto"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -72,11 +76,26 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             )
         """.trimIndent()
         db.execSQL(createRemindersTable)
+
+        val createForosTable = """
+            CREATE TABLE $TABLE_FOROS (
+                $COLUMN_FORO_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                $COLUMN_FORO_TEXT TEXT NOT NULL
+            )
+        """.trimIndent()
+        db.execSQL(createForosTable)
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        if (oldVersion < 3) {
-            db.execSQL("CREATE TABLE $TABLE_REMINDERS ($COLUMN_REMINDER_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COLUMN_REMINDER_DATE TEXT NOT NULL, $COLUMN_REMINDER_NOTE TEXT NOT NULL)")
+        if (oldVersion < 4) {
+            val createForosTable = """
+                CREATE TABLE $TABLE_FOROS (
+                    $COLUMN_FORO_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    $COLUMN_FORO_TEXT TEXT NOT NULL
+                )
+            """.trimIndent()
+            db.execSQL(createForosTable)
         }
         // Add any further upgrade logic if necessary
     }
@@ -252,6 +271,37 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         cursor.close()
         db.close()
         return date
+    }
+
+
+    fun insertForum(text: String): Long {
+        val db = this.writableDatabase
+        val contentValues = ContentValues().apply {
+            put(COLUMN_FORO_TEXT, text)
+        }
+        val result = db.insert(TABLE_FOROS, null, contentValues)
+        db.close()
+        return result
+    }
+
+    @SuppressLint("Range")
+    fun getAllForums(): List<String> {
+        val db = this.readableDatabase
+        val forums = mutableListOf<String>()
+        val cursor = db.query(
+            TABLE_FOROS,
+            arrayOf(COLUMN_FORO_TEXT),
+            null, null, null, null, null
+        )
+        if (cursor.moveToFirst()) {
+            do {
+                val text = cursor.getString(cursor.getColumnIndex(COLUMN_FORO_TEXT))
+                forums.add(text)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return forums
     }
 
     data class UserData(val name: String, val age: Int, val maritalStatus: String)

@@ -25,7 +25,7 @@
         app:menu="@menu/bottom_nav_menu"
         android:background="@color/crema"
         app:itemIconTint="@color/black"
-        app:itemTextColor="@color/crema"
+        app:itemTextColor="#0000"
         app:itemIconSize="60dp"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
         />
