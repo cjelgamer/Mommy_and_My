@@ -57,6 +57,7 @@
     <string name="msg3">Sintomas y cambios corporales</string>
     <string name="msg4"> Explora los cambios físicos y los síntomas comunes que experimentas durante el embarazo, y cómo afectan tu bienestar general....</string>
     <string name="titlinfo"> Lecturas recomendadas </string>
+    <string name="barrab"> Buscar </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank \nfragment</string>

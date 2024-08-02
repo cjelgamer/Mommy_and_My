@@ -23,15 +23,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <EditText
                 android:id="@+id/busqueda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/barrabsuqueda"
+                android:gravity="center_vertical|start"
+                android:paddingStart="49dp"
+                android:hint="@string/barrab"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintHorizontal_bias="0.409"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="ContentDescription,MissingConstraints" />
+                tools:ignore="ContentDescription,MissingConstraints,RtlSymmetry"
+                android:inputType="textUri|textNoSuggestions"
+                android:importantForAutofill="no"/>
 
             <TextView
                 android:id="@+id/textprev"
