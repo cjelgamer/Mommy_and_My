@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.Toast
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -24,7 +23,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val bt1: ImageButton = view.findViewById(R.id.item01)
         bt1.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = Calendario()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -33,7 +31,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val bt2: ImageButton = view.findViewById(R.id.item02)
         bt2.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = PrevencionFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -42,7 +39,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val bt3: ImageButton = view.findViewById(R.id.item03)
         bt3.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = MonitoreoBebeFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -51,7 +47,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val bt4: ImageButton = view.findViewById(R.id.item04)
         bt4.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = MamaInformadaFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -60,7 +55,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val bt5: ImageButton = view.findViewById(R.id.item05)
         bt5.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = ControlFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -69,7 +63,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val bt6: ImageButton = view.findViewById(R.id.item06)
         bt6.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = ForoFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
@@ -79,7 +72,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         val btf: ImageButton = view.findViewById(R.id.item07)
         btf.setOnClickListener {
-            Toast.makeText(context, "Button clicked!", Toast.LENGTH_SHORT).show()
             val nextFragment = PropioFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.contendor_fragmentos, nextFragment)
