@@ -51,7 +51,12 @@
     <string name="itemcontrol2">Contador de \ncontracciones</string>
     <string name="itemcontrol3">Síntomas adicionales</string>
     <string name="itemcontrol4">Cambios corporales</string>
-
+    <string name="im1">imagen</string>
+    <string name="msg1">Ejercicios a realizar durante el \nembarazo</string>
+    <string name="msg2">mientras que muchos tipos de ejercicios son seguros durante el embarazo....</string>
+    <string name="msg3">Sintomas y cambios corporales</string>
+    <string name="msg4"> Explora los cambios físicos y los síntomas comunes que experimentas durante el embarazo, y cómo afectan tu bienestar general....</string>
+    <string name="titlinfo"> Lecturas recomendadas </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank \nfragment</string>

@@ -26,6 +26,7 @@
     <color name="naranjaPastel">#F3CFAE</color>
     <color name="celeste">#C8FFFA</color>
     <color name="morado">#F8D0FF</color>
+    <color name="morado2">#E77AF6</color>
     <color name="crema">#FFF4D7</color>
     <color name="rojoprev">#EB5151</color>
     <color name="verdeitem">#B2F074</color>
@@ -35,5 +36,6 @@
     <color name="cafe">#7E4612</color>
     <color name="cremacont">#FFF9EB</color>
     <color name="caramelobtsec">#ECB286</color>
+    <color name="gris">#CACACA</color>
 
 </resources>
