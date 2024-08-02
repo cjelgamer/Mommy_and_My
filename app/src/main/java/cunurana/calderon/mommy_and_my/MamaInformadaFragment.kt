@@ -1,5 +1,7 @@
 package cunurana.calderon.mommy_and_my
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,6 +28,9 @@ class MamaInformadaFragment : Fragment() {
 
         item1View.setOnClickListener {
             Toast.makeText(context, "Item clicado", Toast.LENGTH_SHORT).show()
+            val url = "https://example.com" //
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
     }
 }
